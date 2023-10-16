@@ -1,56 +1,76 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-<style>
-Body {
-font-family:calibri,Arial, Helvetica, sans-serif;
-background-color:pink
-}
-button{
-background-color: #4CAF50;
-width:auto;
-color:orange;
-padding:10px;
-margin:10px 10px
-cursor : pointer;
-position :relative;
-} 
-
-
-
-
-
-
-
-
-
-
-</style>
-   
-    <meta name="viewport" content="width = device-width, initial scale=1">
     <title>Login Page</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
 
+        .login-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            width: 300px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .input-group {
+            margin: 10px 0;
+        }
+
+        .input-group label {
+            display: block;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+        }
+
+        .input-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
 <body>
-    <h1> Student Login Form</h1>
-    <form action="login.php" method="post">
-        <div class="container">
-            <label>Username:</label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
-            <br /><br />
-            <label>Passsword:</label>
-            <input type="password" placeholder="Enter Password" name="pwd" required>
-            <br /><br />
-            &nbsp; &nbsp; &nbsp; &nbsp;
-            <button type="submit">Login</button>
-            <button type="reset" class="cancelbtn">cancel</button>
-            <br /><br />
+    <form>
+        <form action="login.php" method="post">
+    <div class="login-container">
+        <h2>Student Login Form</h2>
+        <div class="input-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+        </div>
+        <div class="input-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+        </div>
+        <div class="input-group">
+            <button>Login</button>
+            <input type="reset" value="Cancel"/>
+            <br/><br/>
             <input type="checkbox" checked="checked"> Remember me
             <a href="#">Forgot password?</a>
-        </div>
-    </form>
+    </div>
+</form>
 </body>
-
 </html>
